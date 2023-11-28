@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="AS.css">
+  <title>Appointment Scheduling</title>
+</head>
+<body>
+  <div class="container" id="appointmentContainer">
+    <h2>Appointment Scheduling</h2>
+    <form id="appointmentForm">
+      <label for="doctorName">Select Doctor:</label>
+      <select id="doctorName" name="doctorName" required>
+        <option value="" disabled selected>Select a doctor</option>
+        <option value="SoniaJassi">Dr. Sonia Jassi</option>
+        <option value="Anish">Dr. Anish</option>
+        <option value="Shreshth">Dr.Shreshth</option>
+        <!-- Add more doctors as needed -->
+      </select>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Your Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="appointmentDate">Preferred Date:</label>
+      <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+      <label for="appointmentTime">Preferred Time:</label>
+      <input type="time" id="appointmentTime" name="appointmentTime" required>
+
+      <button type="button" onclick="submitForm()">Schedule Appointment</button>
+    </form>
+
+    <div id="confirmationMessage" class="hidden">
+      <h3>Your Appointment is Confirmed!</h3>
+      <p id="confirmedDoctor"></p>
+      <p id="confirmedTime"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
